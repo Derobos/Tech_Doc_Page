@@ -4,41 +4,97 @@
 <head>
 
     <style>
-        /* style the navigation menu */
-        
         body {
-            font-size: x-large;
-            background-image: url("Images/ubuntu_clean.jpeg");
+            display: block;
+            background-color: cadetblue;
             background-size: 100%;
-            margin: 0;
         }
         
-        ul {
+        main {
+            position: relative;
+            padding-left: 255px;
+            margin-bottom: 30px;
+            align-items: center;
+            max-width: 100%;
+            height: auto;
+            font-size: larger;
+            overflow-wrap: normal;
+        }
+        
+        header {
             font-size: xx-large;
-            text-align: center;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 25%;
-            position: fixed;
+            display: block;
+            justify-self: center;
+        }
+        /* style the navigation menu */
+        
+        #navbar {
+            font-size: xx-large;
             height: 100%;
-            overflow: auto;
+            min-width: 240px;
+            width: 250px;
+            top: 0;
+            position: fixed;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        #navbar ul {
+            height: 75%;
+            padding: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            list-style-type: none;
         }
         
         li a {
             display: block;
-            color: rgb(42, 5, 13);
-            padding: 8px 16px;
+            color: rgb(3, 3, 3);
             text-decoration: none;
+            list-style-type: none;
         }
-        /* change link color on hover */
         
         li a:hover {
-            background-color: rgb(235, 125, 15);
+            background-color: rgb(231, 183, 135);
             color: slategray;
         }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        /* Navigation bar for smaller screens */
+        
+        @media only screen and (max-width: 750px) {
+            #navbar {
+                font-size: medium;
+                height: 135px;
+                top: 0px;
+                width: 100%;
+                overflow: hidden;
+                position: fixed;
+                align-items: center;
+                background-color: darkcyan;
+            }
+            #navbar ul {
+                display: block;
+                text-align: center;
+                padding: 15px 20px;
+                max-height: 75px;
+                text-decoration: none;
+            }
+            main {
+                position: relative;
+                margin-top: 150px;
+                margin-right: 20px;
+                margin-left: 0;
+                padding-left: 0;
+                height: 1500px;
+            }
+        }
     </style>
-
 </head>
 
 
@@ -49,109 +105,124 @@
         <nav id="navbar">
 
             <ul>
-                <header>Linux Install</header>
-                <li><a class="nav-link" href="#Choosing_a_distribution">Choosing a distribution</a></li>
-                <li><a class="nav-link" href="#Download_an_iso">Download an iso</a></li>
+                <header>Linux Installation</header>
+                <li><a class="nav-link" href="#Choose_a_version">Choose a version</a></li>
+                <li><a class="nav-link" href="#Get_an_iso">Get an iso</a></li>
                 <li><a class="nav-link" href="#Installation">Installation</a></li>
-                <li><a class="nav-link" href="#Configuration">Configuration</a></li>
-                <li><a class="nav-link" href="#Explore">Explore</a></li>
+                <li><a class="nav-link" href="#Set_up">Set up</a></li>
+                <li><a class="nav-link" href="#Basic_terminal_commands">Basic terminal commands</a></li>
             </ul>
         </nav>
     </div>
 
 
+    <main id="main-doc">
+
+        <img src="Images/cropped-fulinux-1.jpg" width="400">
+        <h4>Linux is an open source operating system. This means that it is free to use, modify, or distribute. That offers a lot of freedom for users, programmers, and developers to customize their operating system and much of the software used. There are
+            many additional benefits to an open source operating system such as less preloaded "bloatware" and more privacy. This can all be confusing for new users. There are many guides and other help can be found online within the Linux community.</h4>
+
+
+        <section id="Choose_a_version" class="main-section ">
+            <header>Choose a version</header>
+
+
+            <ol>
+                <li>Determine the specifications for the computer you want to use.</li>
+                <li>Make note of the CPU, amount of RAM (memory), and storage (HDD, SSD, or flash drive) available.</li>
+                <li>Research which distributions will work best for your computer</li>
+                <li>You may also be able to choose from a selection of desktop styles.</li>
+
+            </ol>
+            <img src="Images/linux-tree.png">
+            <p>This guide assumes you want to install linux on a desktop or laptop computer. It may also be useful if you are installing Linux on a flashdrive or virtual machine. Become familiar with the target hardware you want to intall Linux on.</p>
+            <p>Key things to identify are the CPU (32 bit vs 64 bit), amount of RAM, and available storage space. These factors may help you decide which Linux distribution you want to install.</p>
+            <p>Look around at the different distributions of Linux that are currently available. The most popular are based on either Debian or Red Hat. Choosing a more popular version will make software and guides easier to find.</p>
 
 
 
 
+        </section>
+
+        <section id="Get_an_iso" class="main-section ">
+            <header>Get an iso</header>
+
+            <ol>
+                <li>Download the version of Linux you have chosen.</li>
+                <li>Choose the right speed (32 bit vs. 64 bit) for your CPU.</li>
+                <li>Save the iso to your HDD or SSD drive.</li>
+                <li>When your iso is finished downloading burn it to a USB thumb drive or DVD</li>
+
+            </ol>
+
+            <p>Once you've settled on a version of Linux you would like to try it's time to download the iso image. Most people recommend downloading this file from the distributions official site, the download should be secure and free.</p>
+            <p>Be sure you choose the right version for the machine you will be installing it on. The 64 bit version will not run on a 32 bit system. Save this download to your HDD or SSD.</p>
+            <p>Next you'll need to burn the iso image to a DVD or flash drive using the utility software of your choice. Something like "Rufus" or "DeepBurner" there are many options available and you should choose the one you are comfortable with.</p>
 
 
-    <main id="main-doc" style="margin-left:25%;padding:1px 16px;height:1000px;">
-        <div>
-            <h1>Linux installation guide</h1>
-        </div>
-        <div>
-            <section id="Choosing_a_distribution" class="main-section ">
-                <header>Choosing a distribution </header>
-                <h5>Some tips to help you choose the right distribution of Linux.</h5>
-                <div class="Spacing" style="height:200px;">
 
-                    <ol>
-                        <li>Determine the specifications for the computer you want to use.</li>
-                        <li>Make note of the CPU, amount of RAM (memory), and storage (HDD or SSD) available.</li>
-                        <li>Research which distributions will work best for your computer</li>
-                        <li>You may also be able to choose from a selection of desktop styles.</li>
-                    </ol>
+        </section>
 
-                </div>
-                <p>Linux is an open source operating system. This means that it is free to use, modify, or distribute.</p>
-                <p>That offers a lot of freedom for users, programmers, and developers to customize their operating system.</p>
-                <p>There are many additional benefits such as less preloaded "bloatware" and more privacy.</p>
-                <p>This can all be confusing for new comers. Guides and other help can be found online within the Linux community.</p>
+        <section id="Installation" class="main-section ">
+            <header>Installation </header>
 
-            </section>
-            <section id="Download_an_iso" class="main-section ">
-                <header>Download an iso</header>
-                <h5>Title description, Sep 2, 2017</h5>
-                <div class="fakeimg " style="height:200px; ">
-                    <ol>
-                        <li>Download the version of Linux you have chosen.</li>
-                        <li>Choose the right speed (32 bit vs. 64 bit) for your C>
-                            <li>Save the iso to your HDD or SSD drive.</li>
-                    </ol>
+            <ol>
+                <li>Make sure partitions are set if needed.</li>
+                <li>restart the machine and boot from the DVD or flash drive.</li>
+                <li>Select "Try it" to confirm you want to install.</li>
+                <li>Click install from the desktop.</li>
+                <li>Be sure you select the right drive to install Linux on.</li>
+            </ol>
 
-                </div>
-                <p>Once you've chosen a version of Linux you would like to try it>
-                    <p>Most people recommend downloading this file from the distribut>
-                        <p>Be sure you choose the right version for the machine you will >
-                            <p>Next you'll need to burn the iso image to a DVD or USB drive u>
-                                <p>Some popular choices are "Rufus " or "DeepBurner " and there a>
-            </section>
-            <section id="Installation" class="main-section ">
-                <header>Installation </header>
-                <h5>Title description, Sep 2, 2017</h5>
-                <div class="fakeimg " style="height:200px; ">Image
-                </div>
-                <p>Now that you have your DVD or USB ready put it in the computer>
-                    <p>You may need to enter the "Bios " to boot from your source if >
-                        <p>This is usually done by pressing "Escape " or one of the "Func>
-                            <p>If your computer loads windows then you may have to restart it>
-                                <p>From the Bios screen, select the boot menu and select the sour>
+            </div>
 
-            </section>
-            <section id="Configuration" class="main-section ">
-                <header>Configuration </header>
-                <h5>Title description, Sep 2, 2017</h5>
-                <div class="fakeimg " style="height:200px; ">Image
-                </div>
-                <p>Some text..</p>
-                <code>Sudo in culpa qui officia deserunt mollit anim id est labor>
-                <p>then</p>
-                <code>sudo</code>
+            <p>Some distributions or configurations may need your HDD or SDD to have partitions set up ahead of time. This should all be explained in the written installation instructions for the distribution you've chosen if it is necessary.</p>
+            <p>Put your bootable DVD or flash drive in the computer and restart your machine. You may need to enter the "Bios" to boot from your DVD or flash drive. This is usually done by pressing "Escape" or one of the "Function" keys during the startup
+                process. If your computer loads windows then you may have to restart it and try again. On windows 10 you can access the bios from the start button under recovery options. From the Bios screen, select the boot menu and select either DVD
+                or USB to boot from the iso you made.</p>
+            <p>The next step will ask you if you want to try Linux or install it on your computer. It is probably best to try it first, to make sure it is working properly and that you like the feel of it. If you decide it isn't for you, simply unplug the
+                flash drive or cd and restart your machine. Once you find a version you like move on to a full installation on your computer. Be sure to select the right target drive when you are doing a full install, or you may accidentally erase important
+                data.
+            </p>
 
-            </section>
-            <section id="Explore" class="main-section ">
-                <header>Explore </header>
-                <h5>Title description, Sep 2, 2017</h5>
-                <div class="fakeimg " style="height:200px; ">Image
-                </div>
-                <p>Some text..</p>
-                <code>Sunt in culpa qui officia deserunt mollit anim id est labor>
-                <code>pwd</code>
-                <code>cd</code>
-                <code>cat</code>
-                <code>touch</code>
-                <code>echo</code>
+        </section>
 
-            </section>
+        <section id="Set_up" class="main-section ">
+            <header>Set up</header>
+            <ol>
+                <li>Update your system.</li>
+                <li>Create a restore point.</li>
+
+            </ol>
+
+            <>The most important thing to do once you've installed Linux is a system update. This will require an internet connection to download any necessary updates. If you are using Wifi and it did not connect after installation you may need a wired
+                connection to complete this process. You may have a preinstalled update manager, if not you can open up a terminal (ctrl+alt+T) and type (<code>sudo apt update</code>) then press enter. It will ask for your password and then check for
+                updates for your system. Next type (<code>sudo apt upgrade</code>) into the terminal and press enter. The updates to be installed will be listed in the terminal and then ask if you want to proceed. Type y then press enter.</p>
+                <p>Next you may want to create a system backup in case something goes wrong and you need to restore your system. There may be a utility pre-installed on the version of Linux you have or you may have to install one yourself.</p>
+                <p>Now you should be safe to explore your new operating system and customize it how you see fit. There are many other guides out there that suggest ways in which you might tweak your environment and software you might find useful. I hope
+                    you will take the time to explore some of them and that you have fun on your journey.</p>
+
+
+
+        </section>
+
+        <section id="Basic_terminal_commands" class="main-section">
+            <header>Basic terminal commands</header>
+
+            <p>A few commands you may frequently use in a Linux terminal, and a short description of what they can do.</p>
+            <p>(<code>Sudo</code>) Superuser do: allows a user to run programs with the priveleges of another user (superuser by default).</p>
+            <p>(<code>pwd</code>) Print working directory: Prints the path of the directory you are currently in starting from the root directory.</p>
+            <p>(<code>cd</code> "directory name") Change directory: Changes the directory you are in.</p>
+            <p>(<code>cat</code> "filename") Concatenate:Prints the contents of a file in the terminal screen.</p>
+            <p>(<code>touch</code> "filename") Creates a file in the current directory. If the file already exists, it will update the timestamp on the file.</p>
+            <p>(<code>man</code>"name") Manual: Opens a manual if one exists.</p>
+
+        </section>
         </div>
 
 
 
     </main>
-
-
-
 
 
 </body>

@@ -1,0 +1,55 @@
+body {
+    background-image: url("Images/ubuntu_clean.jpeg");
+    background-size: 100%;
+    font-size: x-large;
+    min-width: 300px;
+    margin-left: 30%;
+}
+
+
+/* style the navigation menu */
+
+#navbar ul {
+    font-size: xx-large;
+    text-align: center;
+    list-style-type: none;
+    top: 0;
+    left: 0;
+    width: 30%;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: rgb(42, 5, 13);
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+
+/* change link color on hover */
+
+li a:hover {
+    background-color: rgb(235, 125, 15);
+    color: slategray;
+}
+
+
+/* for smaller screens */
+
+@media only screen and (max-width: 750px) {
+    #navbar ul {
+        display: none;
+    }
+    body {
+        margin-top: 10%;
+        margin-left: 0;
+        justify-self: center;
+        width: 100%;
+        background-image: url("Images/ubuntu_clean.jpeg");
+        background-size: 100%;
+        font-size: medium;
+    }
+}
